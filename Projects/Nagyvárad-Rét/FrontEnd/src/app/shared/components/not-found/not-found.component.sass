@@ -1,0 +1,56 @@
+//@import "../../Fonts/fonts.sass"
+
+@font-face
+  src: url("../../Fonts/Fjalla_One/FjallaOne-Regular.ttf")
+  font-family: 'fjalla'
+
+@font-face
+  src: url("../../Fonts/Libre_Franklin/LibreFranklin-Regular.ttf")
+  font-family: 'franklin-regular'
+
+@font-face
+  src: url("../../Fonts/Libre_Franklin/LibreFranklin-Light.ttf")
+  font-family: 'franklin-light'
+
+.container
+  width: 400px
+  height: 100px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  border: 1px solid rgb(224, 224, 224)
+  border-radius: 5px
+  background: rgb(240, 240, 240)
+  color: rgb(54, 54, 54)
+.num
+  font-family: "fjalla"
+  font-size: 2rem
+  margin-right: 2rem
+
+.txt
+  font-family: "franklin-regular"
+  font-size: 1.2rem
+
+.homepage-btn
+  font-family: 'franklin-light'
+  text-decoration: none
+  padding: 0.5rem 1.2rem
+  background: rgb(240, 240, 240)
+  border: 1px solid rgb(224, 224, 224)
+  border-radius: 2px
+  position: absolute
+  top: 1rem
+  left: 1rem
+  color: black
+  transition: background-color 0.5s
+  &:active,
+  &:focus
+    outline: none
+  &:hover
+    background: rgb(209, 209, 209)
+
