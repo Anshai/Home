@@ -1,0 +1,25 @@
+@media (max-width: 500px) {
+  .not-found-container {
+    width: 80%;
+    border: 1px solid #e05a5a;
+    background: #ffc9c9;
+    color: #d64747;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .not-found-container .num {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .not-found-container .txt {
+    font-size: 1.1rem;
+  }
+}
+
+/*# sourceMappingURL=not-found.component.css.map */

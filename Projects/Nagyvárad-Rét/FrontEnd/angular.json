@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ret-test": {
+    "nagyvarad-ret-v1": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ret-test",
+            "outputPath": "dist/nagyvarad-ret-v1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ret-test:build"
+            "browserTarget": "nagyvarad-ret-v1:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ret-test:build:production"
+              "browserTarget": "nagyvarad-ret-v1:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ret-test:build"
+            "browserTarget": "nagyvarad-ret-v1:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ret-test:serve"
+            "devServerTarget": "nagyvarad-ret-v1:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ret-test:serve:production"
+              "devServerTarget": "nagyvarad-ret-v1:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "ret-test"
+  "defaultProject": "nagyvarad-ret-v1"
 }

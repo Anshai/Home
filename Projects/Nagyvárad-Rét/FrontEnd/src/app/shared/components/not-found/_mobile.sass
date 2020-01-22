@@ -1,0 +1,20 @@
+@import "../../styles/colors"
+@media (max-width: 500px)
+  .not-found-container
+    width: 80%
+    border: 1px solid $light-red-border
+    background: $light-red-background
+    color: $light-red-font-color
+    border-radius: 5px
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    .num
+      font-size: 2rem
+      font-weight: bold
+    .txt
+      font-size: 1.1rem

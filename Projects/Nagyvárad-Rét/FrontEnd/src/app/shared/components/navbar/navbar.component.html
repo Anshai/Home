@@ -1,0 +1,45 @@
+<label
+  for="menu-checkbox" class="menu-toggler"
+  [ngStyle]="{'background-color': sidebarOpened ? 'white' : 'rgb(42, 35, 31)'}"
+  (click)="onToggleSideBar()"
+>
+  <svg
+    class="menu-icon-svg"
+    [ngStyle]="{'fill': sidebarOpened ? 'rgb(42, 35, 31)' : 'white'}"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"
+    width="25px"
+    height="25px">
+    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"/></svg>
+</label>
+<input
+  type="checkbox" id="menu-checkbox"
+  [(ngModel)]="sidebarOpened"
+  #checkbox
+>
+<div class="sidebar-container">
+  <div class="sidebar-top-pic"></div>
+  <ul class="sidebar-list">
+    <li class="sidebar-list__element">
+      <a href="#">Random Shit</a>
+    </li>
+    <li class="sidebar-list__element">
+      <a href="#">Random Shit</a>
+    </li>
+    <li class="sidebar-list__element">
+      <a href="#">Random Shit</a>
+    </li>
+    <li class="sidebar-list__element">
+      <a href="#">Random Shit</a>
+    </li>
+    <li class="sidebar-list__element">
+      <a href="#">Random Shit</a>
+    </li>
+  </ul>
+  <div class="sidebar-footer">
+<!--    SOCIAL MEDIA ICONS HERE -->
+  </div>
+</div>
+<div
+  #backdrop
+  class="sidebar-backdrop"
+></div>

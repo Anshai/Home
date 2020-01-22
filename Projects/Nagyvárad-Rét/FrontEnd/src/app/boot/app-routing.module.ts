@@ -1,18 +1,20 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes} from "@angular/router";
-import {NotFoundComponent} from "../shared/components/not-found/not-found.component";
+import {NgModule} from '@angular/core';
+import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
+import {NotFoundComponent} from '../shared/components/not-found/not-found.component';
+import {PublicModule} from '../public/public.module';
 
-const appRoutes: Routes = [
+const appRotues: Routes = [
   {path: '', redirectTo: 'public', pathMatch: 'full'},
-  {path: 'public', loadChildren: '../public/public.module#PublicModule'},
-  {path: 'admin', loadChildren: '../admin/admin.module#AdminModule'},
+  {path: 'public', loadChildren: () => import('../public/public.module').then(mod =>
+      mod.PublicModule)},
   {path: '**', redirectTo: 'not-found'},
   {path: 'not-found', component: NotFoundComponent}
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [
+    RouterModule.forRoot(appRotues, {preloadingStrategy: PreloadAllModules})
+  ],
   exports: [RouterModule]
 })
 

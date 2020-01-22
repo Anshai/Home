@@ -1,0 +1,49 @@
+@media (min-width: 500px)
+  // Disable Mobile views
+  .mobile-container
+    display: none
+
+  // Declare Desktop views
+  .desktop-container
+    //width: 100vw
+    height: 100vh
+    overflow-x: hidden
+    overflow-y: auto
+    perspective: 1px
+    transform: perspective(1px) translateZ(0)
+
+    .pos
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100vw
+
+    .layer1
+      height: 100vh
+      transform: translateZ(-1px) scale(2)
+      z-index: 3
+      background: rgba(255,0,0,0.1)
+      border: 1px solid black
+
+    .layer2
+      height: 200vh
+      transform: translateZ(0px) scale(1)
+      z-index: 2
+      //background: rgba(0,255,0,0.1)
+
+    .layer3
+      height: 300vh
+      transform: translateZ(-4px) scale(4)
+      z-index: 1
+      //background: rgba(0,0,255,0.1)
+
+      .layer4
+      height: 400vh
+      transform: translateZ(-5px) scale(2)
+      z-index: 0
+      //background: rgba(0,0,255,0.1)
+
+
+
+
