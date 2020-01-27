@@ -1,0 +1,106 @@
+// Fonts
+@font-face
+  src: url("../../../assets/Fonts/Ubuntu/Ubuntu-Regular.ttf")
+  font-family: 'ubuntu-regular'
+@font-face
+  src: url("../../../assets/Fonts/Ubuntu/Ubuntu-Light.ttf")
+  font-family: 'ubuntu-light'
+
+*
+  box-sizing: border-box
+
+.admin-top-bar
+  width: 100vw
+  height: 3rem
+  background: rgb(66, 43, 128)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: fixed
+  top: 0
+  left: 0
+  -webkit-box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.56)
+  box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.56)
+  z-index: 10
+  .admin-title
+    //justify-self: center
+    color: white
+    margin: 0
+    padding: 0
+    font-family: 'ubuntu-regular'
+    font-weight: bold
+    font-size: 0.9rem
+    display: flex
+    height: 100%
+    align-items: center
+    svg
+      margin: 0 0.5rem
+  .mid-title
+    color: white
+    margin: 0
+    padding: 0
+    font-family: 'ubuntu-regular'
+    font-weight: bold
+    font-size: 0.9rem
+    position: relative
+    display: none
+  .log-out-btn
+    background: rgba(255,255,255,0.2)
+    border: none
+    padding: 0.5rem 1.2rem
+    margin: 0
+    margin-right: 0.5rem
+    cursor: pointer
+    color: white
+    border-radius: 5px
+    transition: all 500ms
+    &:hover
+      background: rgba(255,255,255,0.1)
+.admin-side-bar
+  width: 7rem
+  height: calc(100vh - 3rem)
+  position: fixed
+  top: 3rem
+  left: 0
+  z-index: 9
+  //border-radius: 0px 10px 10px 0px
+  background: #4b4453
+  .admin-sidebar__list
+    font-family: 'ubuntu-light'
+    font-weight: bold
+    font-size: 0.9rem
+    margin: 0
+    padding: 0
+    list-style: none
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    flex-direction: column
+    align-items: center
+    .admin-sidebar-list__item
+      width: 100%
+      padding: 1rem 0
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: border 0s, color 500ms
+      color: white
+      cursor: pointer
+      &:hover
+        cursor: pointer
+      &:active, &:focus
+        outline: none
+      p
+        margin: 0
+        padding: 0
+.admin-kezelofelulet
+  height: calc(100vh - 3rem)
+  width: calc(100vw - 7rem)
+  position: fixed
+  top: 3rem
+  left: 7rem
+
+.active
+  border-left: 5px solid white
+  background: rgba(255,255,255,0.1)

@@ -1,6 +1,6 @@
 <label
   for="menu-checkbox" class="menu-toggler"
-  [ngStyle]="{'background-color': sidebarOpened ? 'white' : 'rgb(42, 35, 31)'}"
+  [ngStyle]="{'background-color': sidebarOpened ? 'white' : 'rgba(0,0,0,0.3)'}"
   (click)="onToggleSideBar()"
 >
   <svg
@@ -20,19 +20,31 @@
   <div class="sidebar-top-pic"></div>
   <ul class="sidebar-list">
     <li class="sidebar-list__element">
-      <a href="#">Random Shit</a>
+      <a href="#">Főoldal</a>
+    </li>
+    <li class="sidebar-list__element" >
+      <a
+              routerLink="public/home"
+              routerLinkActive="active"
+      >Hírek</a>
     </li>
     <li class="sidebar-list__element">
-      <a href="#">Random Shit</a>
+      <a href="#">Lelkipásztor</a>
     </li>
     <li class="sidebar-list__element">
-      <a href="#">Random Shit</a>
+      <a href="#">Presbitérium</a>
     </li>
     <li class="sidebar-list__element">
-      <a href="#">Random Shit</a>
+      <a href="#">Ifijuság</a>
     </li>
     <li class="sidebar-list__element">
-      <a href="#">Random Shit</a>
+      <a href="#">Zenei élet</a>
+    </li>
+    <li class="sidebar-list__element">
+      <a href="#">Médiatár</a>
+    </li>
+    <li class="sidebar-list__element">
+      <a href="#">Elérhetőségek</a>
     </li>
   </ul>
   <div class="sidebar-footer">

@@ -4,6 +4,7 @@ import {PublicBootComponent} from './boot/public-boot.component';
 import {PublicHomeComponent} from './components/public-home/public.home.component';
 import {PublicRoutingModule} from './public-routing.module';
 import {NapiIgeComponent} from './components/public-home/napi-ige/napi-ige.component';
+import {SharedModule} from "../shared/shared.module";
 
 
 
@@ -15,7 +16,8 @@ import {NapiIgeComponent} from './components/public-home/napi-ige/napi-ige.compo
   ],
   imports: [
     CommonModule,
-    PublicRoutingModule
+    PublicRoutingModule,
+      SharedModule
   ]
 })
 export class PublicModule { }

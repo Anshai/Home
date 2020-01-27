@@ -1,0 +1,17 @@
+<div class="container">
+        <form class="napi-ige-form" [formGroup]="napiIgeForm" (ngSubmit)="onSubmit()">
+            <label >
+                Ige
+                <textarea cols="30" rows="10" formControlName="ige"></textarea>
+            </label>
+            <label >
+                Source
+                <input type="text" formControlName="source">
+            </label>
+            <label >
+                Magyarazat
+                <textarea cols="30" rows="10" formControlName="magyarazat"></textarea>
+            </label>
+            <button type="submit" [disabled]="!napiIgeForm.valid">submit</button>
+        </form>
+</div>

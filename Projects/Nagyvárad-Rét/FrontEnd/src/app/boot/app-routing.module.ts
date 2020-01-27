@@ -7,6 +7,9 @@ const appRotues: Routes = [
   {path: '', redirectTo: 'public', pathMatch: 'full'},
   {path: 'public', loadChildren: () => import('../public/public.module').then(mod =>
       mod.PublicModule)},
+    // AUTH GUARD INCOMING
+  {path: 'admin', loadChildren: () => import('../admin/admin.module').then(mod =>
+      mod.AdminModule)},
   {path: '**', redirectTo: 'not-found'},
   {path: 'not-found', component: NotFoundComponent}
 ];

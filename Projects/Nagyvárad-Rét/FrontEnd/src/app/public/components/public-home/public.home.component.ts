@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {NapiIgeService} from '../../services/napi-ige.service';
+
+import {NapiIge} from "../../models/napi-ige.model";
+import {ActivatedRoute} from "@angular/router";
+import {NapiIgeService} from "../../services/napi-ige.service";
 
 @Component({
   selector: 'app-public-home',
@@ -8,23 +11,14 @@ import {NapiIgeService} from '../../services/napi-ige.service';
 })
 
 export class PublicHomeComponent implements OnInit {
-  napiIge: {
-    title: string,
-    source: string,
-    ige: string,
-    magyarazat: string
-  } = {
-    title: 'Napi Ige',
-    source: 'source',
-    ige: 'ige',
-    magyarazat: 'magyarazat'
-  };
+  napiIge: NapiIge = new NapiIge();
 
-  constructor(private igeService: NapiIgeService) {}
+  constructor(private route: ActivatedRoute,
+              private igeService: NapiIgeService) {}
 
   ngOnInit() {
-    this.igeService.getNapiIge((ige) => {
-      this.napiIge = ige;
+    this.route.data.subscribe(data => {
+      this.napiIge = data.napiIge;
     });
   }
 }
